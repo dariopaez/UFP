@@ -41,6 +41,8 @@
         //function will be called when an error occurred
         function errorCB(err) {
             alert("Error processing SQL: " + err.code);
+            alert("eror : " + err);
+
         }
 
         //function will be called when process succeed
@@ -55,7 +57,7 @@
         }
 
         function querySuccess(tx, result) {
-            alert(">>"+result);
+            alert(">>" + result[0]);
             $('#SoccerPlayerList').empty();
             $.each(result.rows, function (index) {
                 alert(row['Name']);
