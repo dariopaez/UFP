@@ -8,7 +8,7 @@
     <description>
         Uniretail: Aplicación de apoyo a la gestión de ventas 
     </description>
-    <author email="contacto@unidatos.com" href="http://www.unidatos.com">
+    <author email="dario.paez@mobiltech.co" href="http://www.unidatos.com">
         
     </author>
     
@@ -31,7 +31,6 @@
 
     <platform name="android">
     <allow-intent href="market:*"/>
-            <splash src="resources/android/splash/drawable-port-hdpi-screen.png" density="port-hdpi"/>
                     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
 
 <!--
@@ -51,7 +50,9 @@
         <splash src="resources/android/splash/drawable-port-mdpi-screen.png" density="port-mdpi"/>
         <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
         <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
-        <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>drawable-land-hdpi-screen
+        <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
+                    <splash src="resources/android/splash/drawable-port-hdpi-screen.png" density="port-hdpi"/>
+
         -->
       </platform>
 
