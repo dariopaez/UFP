@@ -1,0 +1,13 @@
+*{
+font-family: 'Lato', sans-serif;
+}
+body, html{
+	background: #FFF;
+	font-family: 'Lato', sans-serif;
+}
+.cuerpo{
+	background: #FFF;
+}
+i{
+	font-weight: bold;
+}

@@ -1,0 +1,22 @@
+.botonesAbajo{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+.botonesAbajo .boton{
+	width: 20%;
+	float: left;
+	text-align: center;
+	padding: 2px;
+	font-size: 18px;
+	color: #000;
+	border-left: solid 1px rgba(0,0,0, 0.2);
+	border-top: solid 1px rgba(0,0,0, 0.2);
+	max-height: 50px;
+	cursor: pointer;
+	background: #FFF;
+}
+.botonesAbajo .boton:hover{
+	background: #0B4C5F;
+	color: #FFF;
+}

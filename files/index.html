@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<!-- Mirrored from www.g-axon.com/integral-2.0/light/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Oct 2016 16:28:39 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Integral - A fully responsive, HTML5 based admin template">
+    <meta name="keywords" content="Responsive, Web Application, HTML5, Admin Template, business, professional, Integral, web design, CSS3">
+    <title>INICIO DE SESION</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+    <link href="css/entypo.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/integral-core.css" rel="stylesheet">
+    <link href="css/integral-forms.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="todas.css">
+    <link href="css/alertify.css" rel="stylesheet">
+    <link href="css/alertify.rtl.css" rel="stylesheet">
+
+    <script>
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+         var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(populateDB, errorCB, successCB);
+        }
+
+        // Handle the back button
+        //
+        function onBackKeyDown() {
+        }
+
+    </script>
+</head>
+
+<body class="login-page">
+
+    <!-- Loader Backdrop -->
+    <div class="loader-backdrop">
+        <!-- Loader -->
+        <div class="loader">
+            <div class="bounce-1"></div>
+            <div class="bounce-2"></div>
+        </div>
+        <!-- /loader -->
+    </div>
+    <!-- loader backgrop -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS DEMO');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+        }
+
+        function errorCB(err) {
+            alert("Error processing SQL: " + err.code);
+        }
+
+        function successCB() {
+            alert("success!");
+        }
+
+      
+    </script>
+    <div class="login-container">
+        <div class="login-branding" hidden>
+            <a href="index.html"><img src="img/servignet.png" alt="Integral" title="Integral"></a>
+        </div>
+        <div class="login-content">
+            <h2 class="centro"><strong>Ping puerto 8095</strong></h2>
+            <form method="post" action="http://www.g-axon.com/integral-2.0/light/index.html" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="button" onclick="enviar();" value="Ping" class="btn btn-primary btn-block">
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" col="5" placeholder="Acá respuesta del vios"></textarea>
+                </div>
+                <div class="form-group" id="msj" style="text-align: center;"></div>
+            </form>
+        </div>
+    </div>
+
+    <!--Load JQuery-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="alertify.js"></script>
+</body>
+
+</html>
