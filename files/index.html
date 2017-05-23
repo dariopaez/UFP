@@ -55,10 +55,12 @@
         }
 
         function querySuccess(tx, result) {
+            alert(">>"+result);
             $('#SoccerPlayerList').empty();
             $.each(result.rows, function (index) {
+                alert(row['Name']);
                 var row = result.rows.item(index);
-                $('#SoccerPlayerList').append('<li><a href="#"><h3 class="ui-li-heading">' + row['Name'] + '</h3><p class="ui-li-desc">Club ' + row['Club'] + '</p></a></li>');
+                $('#SoccerPlayerList').append('"<li><a href="#"><h3 class="ui-li-heading">' + row['Name'] + '</h3><p class="ui-li-desc">Club ' + row['Club'] + '</p></a></li>"');
             });
 
             $('#SoccerPlayerList').listview();
