@@ -25,7 +25,7 @@ $(document).ready(function () {
             tx.executeSql("SELECT * FROM CONTACTO;", [], function (tx, rs) {
                 for (var i = 0; i < rs.rows.length; i++) {
                     var p = rs.rows.item(i);
-                    window.console.log("nombre=" + p.nombre + "------telefono" + p.telefono);
+                    window.alert("nombre=" + p.nombre + "------telefono" + p.telefono);
                 }
             });
         }, errorDB, exitoDB);
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
         db.transaction(function (tx) {
             tx.executeSql("DELETE FROM CONTACTO");
-            window.console.log("Limpiar database");
+            window.alert("Limpiar database");
 
         }, errorDB, exitoDB);
     });
@@ -44,11 +44,11 @@ function exitoFoto(url) {
     $("#contenedorFoto").show();
 }
 function errorFoto(resp) {
-    window.console.log("error Foto");
+    window.alert("error Foto");
 }
 function errorDB(resp) {
-    window.console.log("error bd1");
+    window.alert("error bd1");
 }
 function exitoDB(resp) {
-    window.console.log("exito bd2");
+    window.alert("exito bd2");
 }
